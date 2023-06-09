@@ -1,0 +1,53 @@
+class Solution {
+public:
+
+    int maxProfit(vector<int>& prices) {
+        int n = prices.size();
+
+        // brute force (passed 199 test cases)
+
+        // int maxProf = 0;
+
+        // for(int i = 0; i < n; i++){
+        //     for(int j = i + 1; j < n; j++){
+
+        //         if(prices[j] - prices[i] > maxProf ){
+        //             maxProf = prices[j] - prices[i];
+        //         }
+        //     }
+        // }
+
+        // return maxProf;
+
+        // optimised solution passes all the test cases 
+        // with the help of space optimisation
+
+        // int arr[n];
+        // int prevMax = prices[n - 1];
+
+        // for(int i = n - 1; i >= 0; i-- ){
+
+        //     if(prices[i] >= prevMax){
+        //         prevMax = prices[i]; 
+        //     }
+
+        //     arr[i] = prevMax;
+
+        // }
+
+        // int maxProf = 0;
+
+        // for(int i = 0; i < n; i++){
+        //     if(arr[i] - prices[i] > maxProf){
+        //         maxProf = arr[i] - prices[i];
+        //     }
+        // }
+
+        // for(int i = 0; i < n; i++){
+        //     cout << arr[i] << endl;
+        // }
+        // return maxProf;
+
+        
+    }
+};
