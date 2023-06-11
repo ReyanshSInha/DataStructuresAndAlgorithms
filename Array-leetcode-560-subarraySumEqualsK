@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        // passes 86/93 test cases...
+        int count = 0;
+        int sum;
+        for(int i = 0; i < nums.size(); i++){
+            sum = 0;
+            sum += nums[i];
+
+            if(sum == k){
+                count++;
+            }
+
+            for(int j = i + 1; j < nums.size(); j++){
+                sum += nums[j];
+                
+                if(sum == k){
+                    count++;
+                    // break;
+                }
+            }        
+        }
+        
+        return count;
+    }
+};
